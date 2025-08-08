@@ -1,9 +1,22 @@
 @import "tailwindcss";
-.no-scrollbar::-webkit-scrollbar{
-        display: none;
 
-    }
-    .no-scrollbar{
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
+@layer components {
+  .container1:hover .button-color {
+    background-color: #895AF6;
+    color: white;
+  }
+  .container1:hover .btn-white {
+    color: white;
+    transition: color 0.7s;
+  }
+
+  .container1:hover .text-color {
+    color: #935EFF;
+    transition: color 0.7s;
+  }
+
+  .container1:hover .icon-scale{
+    scale: 1.1;
+    transition:scale 0.7s; 
+  }
+}

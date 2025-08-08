@@ -29,8 +29,9 @@ import {Link} from "react-router-dom"
 const MainPage = () => {
   return(
     <div className="w-full font-sans no-scrollbar ">
-      {/*Header*/}
-      <header className="w-full flex justify-between h-20 bg-[#FCFCFF] items-center box-border fixed">
+      {/*Header */}
+      <header className="w-full fixed ">
+        <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-10 ml-22" />
           </div>
@@ -48,10 +49,12 @@ const MainPage = () => {
             duration-100 ease-in-out hover:scale-109 ">Get Started</button>
             </a>
           </div>
+      </div>
       </header>
 
+
       {/*Home Page*/}
-      <main id="Home" className="w-full h-auto bg-[#F9F6FF] flex flex-col justify-center pt-20">
+      <main id="Home" className="w-full h-auto bg-[#F9F6FF] flex flex-col justify-center pt-20 ">
         
         <div className="flex justify-center ">
           <div className="flex justify-center rounded-2xl bg-[#7f669923] mt-10 w-60 p-1"> 
@@ -238,14 +241,14 @@ const MainPage = () => {
         
         <div className="flex justify-evenly mt-7">
         {/*card 1*/}
-        <div className="flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">1</span>
-          <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
+          <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><MdOutlineSecurity className="text-[28px] text-white mx-1"/></span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-[26px] font-bold">AI Reference Checks</h1>
+            <h1 className="text-[26px] font-bold text-color ">AI Reference Checks</h1>
             <p className="bg-[#F2ECFE] text-[#8E61F6] rounded-2xl text-center w-45 px-2 my-3">Structured & Verified</p>
             <p className="text-gray-500 text-center">AI-powered reference interviews that go beyond 
             generic questions. Get structured insights with scoring and verification that reveals real performance patterns.</p>
@@ -261,23 +264,23 @@ const MainPage = () => {
           <div className="w-full flex flex-col">
             <button className="bg-[#F2EDFE] mt-2 w-full rounded-lg py-3 text-[15px] text-[#935EFF] 
             font-[600] my-2">No more ghost references</button> 
-            <button className="w-full flex justify-center items-center border-[#F2E6FF] 
+            <button className=" button-color w-full flex justify-center items-center border-[#F2E6FF] 
                 border-2 p-2 rounded-2xl transition delay-75 duration-300 hover:scale-103 
-                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium ">Try Reference Checks</span> 
-                <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
+                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium btn-white">Try Reference Checks</span> 
+                <IoIosArrowRoundForward className="mx-1 text-2xl btn-white"/> </button>
             
           </div>
         </div>
 
         {/*card 2*/}
-        <div className="flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">2</span>
-          <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
+          <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><FiCreditCard className="text-[28px] text-white mx-1"/></span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-[26px] font-bold">Candidate Passports</h1>
+            <h1 className="text-[26px] font-bold text-color">Candidate Passports</h1>
             <p className="bg-[#F2ECFE] text-[#8E61F6] rounded-2xl text-center w-45 px-2 my-3">Portable & Reusable</p>
             <p className="text-gray-500 text-center">Verified, portable hiring profiles that candidates own. Think LinkedIn + Credit Score + Background Check in one reusable document.</p>
 
@@ -292,22 +295,22 @@ const MainPage = () => {
           <div className="w-full flex flex-col">
             <button className="bg-[#F2EDFE] mt-2 w-full rounded-lg py-3 text-[15px] text-[#935EFF] 
             font-[600] my-2">Owned by candidates, trusted by employers</button> 
-            <button className="w-full flex justify-center items-center border-[#F2E6FF] 
+            <button className=" button-color w-full flex justify-center items-center border-[#F2E6FF] 
                 border-2 p-2 rounded-2xl transition delay-75 duration-300 hover:scale-103 
-                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium ">Create Passport </span> 
-                <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
+                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium btn-white">Create Passport </span> 
+                <IoIosArrowRoundForward className="mx-1 text-2xl btn-white"/> </button>
             
           </div>
         </div>
         {/*card 3*/}
-        <div className="flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">3</span>
-          <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
+          <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><FaMicrophone className="text-[28px] text-white mx-1"/></span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-[26px] font-bold">L1 AI Interviews</h1>
+            <h1 className="text-[26px] font-bold text-color">L1 AI Interviews</h1>
             <p className="bg-[#F2ECFE] text-[#8E61F6] rounded-2xl text-center w-45 px-2 my-3">Scale Your Screening</p>
             <p className="text-gray-500 text-center">Screen high-volume non-tech roles with intelligent, conversational AI. Perfect for sales, support, and ops roles where soft skills matter.</p>
 
@@ -322,10 +325,10 @@ const MainPage = () => {
           <div className="w-full flex flex-col">
             <button className="bg-[#F2EDFE] mt-2 w-full rounded-lg py-3 text-[15px] text-[#935EFF] 
             font-[600] my-2">Coming soon - join waitlist</button> 
-            <button className="w-full flex justify-center items-center border-[#F2E6FF] 
+            <button className="button-color w-full flex justify-center items-center border-[#F2E6FF] 
                 border-2 p-2 rounded-2xl transition delay-75 duration-300 hover:scale-103 
-                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium ">Try AI Interviews</span> 
-                <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
+                hover:bg-[#935EFF] text-violet-500  hover:border-[0.1px] my-4 hover:text-[#FFFFFF] text-md"> <span className="font-medium btn-white">Try AI Interviews</span> 
+                <IoIosArrowRoundForward className="mx-1 text-2xl btn-white"/> </button>
             
           </div>
         </div>
@@ -365,7 +368,7 @@ const MainPage = () => {
 
         <div className="flex justify-center gap-8 ">
 
-          <div className="w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105">
+          <div className="card w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 card">
             <div className="flex flex-col items-center">
               <p className=""><BsPeopleFill className="text-[57px] text-[#A676FA] bg-[#F2E6FF] p-3 rounded-2xl"/></p>
               <h1 className="text-[26px] font-[700] mt-2  ">Starter</h1>
@@ -394,7 +397,7 @@ const MainPage = () => {
               </div>
           </div>
           
-          <div className="w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 shadow-2xl shadow-[#A676FA]
+          <div className=" w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 shadow-2xl shadow-[#A676FA]
           border-2  border-[#a573fc]">
             <span className="w-auto text-center px-3 text-white font-bold -mt-125 text-md rounded-2xl absolute bg-linear-to-r from-[#9464F7] bg-[#A772FA] to-[#A774FA]">Most Popular</span>
             <div className="flex flex-col items-center">

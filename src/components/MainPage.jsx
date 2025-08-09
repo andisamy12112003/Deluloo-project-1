@@ -29,8 +29,9 @@ import {Link} from "react-router-dom"
 const MainPage = () => {
   return(
     <div className="w-full font-sans no-scrollbar ">
+
       {/*Header */}
-      <header className="w-full fixed ">
+      <header className="w-full fixed">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-10 ml-22" />
@@ -52,7 +53,16 @@ const MainPage = () => {
       </div>
       </header>
 
-
+      {/*Header sm*/}
+      <header className="w-full fixed hidden">
+        <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
+          <div>
+            <img src={iconDeluloo} alt="" className="w-10 ml-22" />
+          </div>
+          
+      </div>
+      </header>
+      
       {/*Home Page*/}
       <main id="Home" className="w-full h-auto bg-[#F9F6FF] flex flex-col justify-center pt-20 ">
         
@@ -65,11 +75,11 @@ const MainPage = () => {
 
 
         <div className="">
-          <h1 className="text-[100px] text-center font-bold tracking-[2px]">
-            <span className="block ">The world doesn't </span><span className="block -mt-12">need 
-            </span><span className="block -mt-12 text-[#9465F8]">another solution.</span>
-            <span className="block -mt-12">It needs a</span> 
-            <span className="block -mt-12 text-[#9465F8]">delusion-free one.</span>
+          <h1 className="max-sm:text-[50px] text-[100px] text-center font-bold tracking-[2px]">
+            <span className="block ">The world doesn't </span><span className="block max-sm:-mt-1 -mt-12">need 
+            </span><span className="block max-sm:-mt-1 -mt-12 text-[#9465F8]">another solution.</span>
+            <span className="block -mt-12 max-sm:-mt-1">It needs a</span> 
+            <span className="block max-sm:-mt-1 -mt-12 text-[#9465F8]">delusion-free one.</span>
           </h1>
         </div>
 
@@ -96,7 +106,7 @@ const MainPage = () => {
           </p>
         </div>
 
-        <div className="mt-6 flex justify-center gap-6">
+        <div className="mt-6 flex justify-center gap-6 max-sm:flex-col max-sm:w-full max-sm:items-center max-sm:justify-center ">
 
           <div className="border-1 w-80 border-gray-200 p-8 rounded-2xl transition delay-75 duration-400 hover:scale-106 hover:shadow-2xl ">
             <p className="text-[30px] text-red-600 font-bold"><HiArrowTrendingDown/></p>
@@ -135,15 +145,15 @@ const MainPage = () => {
 
       {/*What Makes Deluloo Different*/}
       <section className=" w-full h-auto bg-[#F4F0FE] ">  
-        <div className="p-12 box-border flex justify-center"> 
+        <div className="p-12 box-border flex justify-center max-sm:flex-col "> 
 
-          <div className="bg-[#FFFFFF] text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
+          <div className="bg-[#FFFFFF]  text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
             <h1 className="flex items-center "><FaMicrophone className="text-violet-800 text-2xl"/> <span className="ml-3">AI L1 Interviews
             </span></h1>
           </div>
 
           
-          <div className="bg-[#FFFFFF] text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
+          <div className="bg-[#FFFFFF] max-sm:my-5 text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
             <h1 className="flex items-center "><MdOutlineSecurity className="text-violet-800 text-2xl"/> <span className="ml-3">Reference Checks
             </span></h1>
           </div>
@@ -163,9 +173,9 @@ const MainPage = () => {
 
 
           {/**/}
-          <div className=" flex justify-center gap-12 mt-10">
+          <div className=" flex justify-center gap-12 mt-10 max-sm:flex-col flex-wrap">
 
-            <div className="w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
+            <div className="max-sm:w-auto max-sm:mx-2 w-140  flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
               <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
                 <span className=""><TiMicrophone className="text-[28px] text-white mx-1"/></span>
               </div>
@@ -175,7 +185,7 @@ const MainPage = () => {
               </div>
             </div>
 
-            <div className="w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
+            <div className="max-sm:w-auto max-sm:mx-2 w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
               <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
                 <span className=""><FiCreditCard className="text-[28px] text-white mx-0.  5 "/></span>
               </div>
@@ -187,9 +197,9 @@ const MainPage = () => {
 
           </div>
 
-          <div className=" flex justify-center gap-12 mt-10">
+          <div className="max-sm:flex-col flex justify-center gap-12 mt-10 flex-wrap">
 
-            <div className="w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
+            <div className="max-sm:w-auto max-sm:mx-2 w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
               <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
                 <span className=""><TbWorld className="text-[28px] text-white mx-1"/></span>
               </div>
@@ -199,7 +209,7 @@ const MainPage = () => {
               </div>
             </div>
 
-            <div className="w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
+            <div className="max-sm:w-auto max-sm:mx-2 w-140 flex bg-[#ffff] p-8 rounded-2xl transition delay-85 duration-400 hover:scale-106 hover:shadow-lg hover:shadow-[#b383fc33]">
               <div className="bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
                 <span className=""><MdOutlineSecurity className="text-[28px] text-white mx-1"/></span>
               </div>
@@ -212,8 +222,8 @@ const MainPage = () => {
           </div>
 
         </div>
-        <div className="w-full flex justify-center ">
-          <div className="w-[50vw] bg-white mt-20 mb-27 text-center p-7 rounded-2xl shadow-2xl shadow-[#925cff3c]">
+        <div className=" w-full flex justify-center ">
+          <div className="max-sm:w-auto max-sm:mx-2 w-[50vw] bg-white mt-20 mb-27 text-center p-7 rounded-2xl shadow-2xl shadow-[#925cff3c]">
             
           <h1 className="font-[700] text-lg">💸 Bad hires can cost 30% of an employee's CTC.</h1>
           <p className="text-[#64748B] my-3">And reference checks? Most are done on autopilot — or skipped.
@@ -225,7 +235,7 @@ const MainPage = () => {
       </section>
 
       {/*How Deluloo Works*/}
-      <section id="HowDeluloo" className="w-full" >
+      <section id="HowDeluloo" className="w-full " >
         <div className="flex justify-center mt-12 mb-4">
           <div className="flex justify-center rounded-2xl bg-[#7f669923] mt-10 w-auto p-1 "> 
             <div className="flex items-center px-3 "><span className="mr-1 text-[#9E77F8]"><BsStars /></span> 
@@ -235,19 +245,19 @@ const MainPage = () => {
 
         <div className="text-center flex flex-col items-center ">
           <h1 className="text-[50px] font-bold mb-2">How Deluloo Works</h1>
-          <p className="text-gray-500 text-[20px] w-210 mb-10">Three powerful modules that work together 
+          <p className="text-gray-500 text-[20px] w-210 mb-10 max-sm:w-full">Three powerful modules that work together 
           to establish trust before you hire. Use them individually or as a complete hiring solution.</p>
         </div>
         
-        <div className="flex justify-evenly mt-7">
+        <div className="flex justify-evenly mt-7 max-sm:flex-col flex-wrap max-sm:items-center ">
         {/*card 1*/}
-        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">1</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><MdOutlineSecurity className="text-[28px] text-white mx-1"/></span>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center ">
             <h1 className="text-[26px] font-bold text-color ">AI Reference Checks</h1>
             <p className="bg-[#F2ECFE] text-[#8E61F6] rounded-2xl text-center w-45 px-2 my-3">Structured & Verified</p>
             <p className="text-gray-500 text-center">AI-powered reference interviews that go beyond 
@@ -273,7 +283,7 @@ const MainPage = () => {
         </div>
 
         {/*card 2*/}
-        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">2</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
@@ -303,7 +313,7 @@ const MainPage = () => {
           </div>
         </div>
         {/*card 3*/}
-        <div className=" container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
           <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">3</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
@@ -336,19 +346,19 @@ const MainPage = () => {
 
         </div>
         
-        <div className="flex justify-center my-9">
+        <div className="flex justify-center my-9 max-sm:w-full ">
           <div className="text-center bg-[#F4F0FE] border-1 border-[#c18ffe31] w-[85vw] rounded-2xl p-7 ">
           <h1 className="text-[25px] font-[700] ">Use them together or individually</h1>
           <p className="text-gray-600 mt-3">Start with one module and scale up, or implement the complete trust layer for your hiring process. </p>
-          <div className="flex justify-center mt-5 mb-3">
+          <div className="flex justify-center mt-5 mb-3 max-sm:flex max-sm:flex-col max-sm:w-full max-sm:justify-center max-sm:items-center  ">
             <a href="#About">
-            <button className="w-70 h-15 text-md mx-12 font-medium rounded-2xl text-white 
+            <button className=" w-70 h-15 text-md mx-12 font-medium rounded-2xl text-white 
             bg-linear-to-l from-violet-400 bg-[#7d49d8c8] flex justify-center items-center transition delay-100 duration-300 hover:scale-110 ">
             <span className="mr-2">Book Demo - See All Modules</span> <IoIosArrowRoundForward/></button>
             </a>
 
             <a href="#Pricing">
-              <button className="transition delay-75 duration-300 w-40 h-15 rounded-2xl border-1 
+              <button className="max-sm:w-70 max-sm:mt-2 transition delay-75 duration-300 w-40 h-15 rounded-2xl border-1 
             border-[#9465f845] font-[600] text-violet-500 hover:bg-[#F2E6FF]">View Pricing</button>
             </a>
 
@@ -360,13 +370,13 @@ const MainPage = () => {
       </section>
 
       {/*Simple, Transparent Pricing*/}
-      <section id="Pricing" className=" bg-[#F7F4FF] pt-[10vh]">
+      <section id="Pricing" className=" bg-[#F7F4FF] pt-[10vh] max-sm:h-[300vh]">
         <div className="text-center">
           <h1 className="text-[48px] font-[700]">Simple, Transparent Pricing</h1>
           <p className="text-[#777E8F] text-[20px]">Start free, scale as you grow. No setup fees, no hidden costs.</p>
         </div>
 
-        <div className="flex justify-center gap-8 ">
+        <div className="flex justify-center gap-8 max-sm:flex-col max-sm:items-center flex-wrap">
 
           <div className="card w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 card">
             <div className="flex flex-col items-center">
@@ -472,9 +482,8 @@ const MainPage = () => {
         <div className="h-100 mt-12 w-full">
             <h1 className="text-center text-[24px] font-[700]">Frequently Asked Questions</h1>
             <div className="flex flex-col justify-center items-center gap-7">
-              <div className=" flex gap-6 mt-8">
-
-              <div className="w-100 h-auto bg-white rounded-2xl p-5">
+              <div className=" flex gap-6 mt-8 max-md:flex-col">
+              <div className="w-100 h-auto bg-white rounded-2xl p-5 ">
                 <p className="font-[600]">Do you offer a free trial?</p>
                 <p className="text-[14px] text-gray-500">Yes! All plans include a 14-day free trial with full access to features.</p>
               </div>
@@ -486,7 +495,7 @@ const MainPage = () => {
 
             </div>
 
-            <div className=" flex gap-6">
+            <div className=" flex gap-6 max-md:flex-col">
 
               <div className="w-100 h-auto bg-white rounded-2xl p-5">
                 <p className="font-[600]">What about data security?</p>
@@ -499,6 +508,7 @@ const MainPage = () => {
               </div>
 
             </div>
+
             </div>
 
 
@@ -506,9 +516,9 @@ const MainPage = () => {
       </section>
 
       {/*Ready to build trust before you hire?*/}
-      <section id="About"  className="pt-[6vw] w-full h-auto flex justify-center items-center p-10">
+      <section id="About"  className="pt-[6vw] max-sm:w-full h-auto flex justify-center items-center p-10 max-sm:flex-col ">
 
-        <div className="w-[46vw] h-full p-11">
+        <div className="max-sm:w-full w-[46vw] h-full p-11 ">
           <h1 className="text-[49px] font-[700]"><span className="block">Ready to build trust</span> <span className="-mt-6 block">before you hire?</span></h1>
           <p className="text-gray-500 text-[21px]">Book a demo to see how Deluloo's three modules work together to create a delusion-free 
           hiring process. Our team will show you exactly how to implement verified trust in your hiring workflow.</p>
@@ -531,9 +541,9 @@ const MainPage = () => {
 
           </div>
 
-          {/*button*/}
+          {/* button */}
 
-          <div className="flex gap-7 mt-5">
+          <div className="flex gap-7 mt-5 max-sm:flex-col">
             <div className="w-full mt-3">
                 <button className="w-full flex justify-center items-center 
                   p-2 py-4 rounded-2xl transition delay-75 duration-300 hover:scale-104 text-md bg-linear-to-l from- [#9264F7] bg-[#A782FA] to-[#A734FA] "> <span className="font-medium text-white">
@@ -552,7 +562,7 @@ const MainPage = () => {
           </div>
         </div>
       {/*form*/}
-        <div className="w-[50vw] h-auto flex justify-center items-center">
+        <div className="max-sm:w-[100vw] w-[50vw] h-auto flex justify-center items-center ">
           <span className="animate-bounce absolute -mt-178 -mr-130 flex items-center text-[15px] 
           bg-[#895AF6] p-1 px-2 text-white font-[600] rounded-2xl text-center transition delay-100 duration-1000">Demo Ready <GiCheckMark className="mx-1 text-sm"/></span>
           <span className=" animate-bounce absolute -mb-178 -ml-145  flex items-center text-[15px] border-1 
@@ -594,7 +604,7 @@ const MainPage = () => {
                 <button className="w-full flex justify-center items-center 
                 p-2 py-3 rounded-lg  transition delay-75 duration-300 hover:scale-104 text-md bg-linear-to-r from-[#9464F7] bg-[#A772FA] to-[#A774FA] "> <span className="font-medium text-white">
                 Shedule Demo</span> 
-                <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
+                <IoIosArrowRoundForward className="mx-1 text-2xl text-white"/> </button>
               </div>
               {/*contact*/}
 
@@ -633,19 +643,19 @@ const MainPage = () => {
           <p  className="text-[24px] text-gray-500 mt-4">Don't just fix your hiring pipeline. Fix your trust layer.</p>
         </div>
 
-        <div className="flex justify-center gap-6 mt-7">
+        <div className="flex justify-center gap-6 mt-7 max-sm:flex-col max-sm:w-full max-sm:justify-center max-sm:p-8">
             <div className=" mt-3">
-                <a href="#About">
-                  <button className="w-auto flex justify-center items-center 
+                <a href="#About" className="">
+                  <button className=" w-auto flex justify-center items-center max-sm:w-full
                   p-9 py-4 rounded-2xl transition delay-75 duration-300 hover:scale-104 text-md bg-linear-to-l from- [#9264F7] bg-[#A782FA] to-[#A734FA] "> <span className="font-medium text-white">
                   Book Demo</span> 
                   <IoIosArrowRoundForward className="mx-1 text-2xl text-white "/> 
                 </button>
                 </a>
           </div>
-          <div className="mt-3">
+          <div className="mt-3 max-sm:-mt-2">
                 <a href="#Pricing">
-                  <button className="w-auto flex justify-center items-center border-[#F2E6FF] 
+                  <button className="max-sm:w-full max-sm:mb-12 w-auto flex justify-center items-center border-[#F2E6FF] 
                 border-2 p-9 py-4 rounded-2xl transition delay-75 duration-300 hover:scale-103 
                 hover:bg-[#F2E6FF] hover:border-[0.1px] text-[#9D6DF9] text-md bg-white"> <span className="font-medium ">Use Passport Free</span> 
                 <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
@@ -653,7 +663,7 @@ const MainPage = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center items-center mt-1  ">
+        <div className="w-full flex justify-center items-center mt-1 max-sm:flex-col max-sm:-mt-15">
             <div className="flex flex-col justify-start ">        
              <p className="flex justify-start items-center"><LuDot className="text-violet-500 text-5xl"/> <span className="-ml-2 text-[15px] font-[400] text-[#738197]">No setup fees</span></p>
             </div>
@@ -672,7 +682,7 @@ const MainPage = () => {
       {/*footer*/}
       <footer className="w-full h-auto p-15">
 
-        <div className="flex justify-between ">
+        <div className="flex justify-between max-sm:flex-col">
           <div className="">
           <div className="flex items-center ">
             <img src={iconDeluloo} alt="" className="w-13" />
@@ -680,7 +690,7 @@ const MainPage = () => {
             
           </div>
           <p className="text-gray-500 text-[18px] my-7  ">The delusion-free hiring solution. Verify trust before you hire.</p>
-          <div className=" mt-5">
+          <div className=" mt-5 mb-6">
                 <a href="#Home">
                   <button className="w-auto flex justify-center items-center 
                   p-4 py-3 rounded-2xl transition delay-75 duration-300 hover:scale-110 text-md bg-linear-to-l from- [#9264F7] bg-[#A782FA] to-[#A734FA] "> <span className="font-medium text-white">
@@ -706,9 +716,9 @@ const MainPage = () => {
 
         </div>
 
-        <div className="flex  justify-between  mt-12 mb-8">
+        <div className="flex justify-between mt-12 mb-8 max-sm:flex-col flex-wrap ">
           
-          <div className="text-gray-500">
+            <div className="text-gray-500 ">
             <h1 className="text-black font-medium ">Product</h1>
             <h1 className="my-2 hover:text-violet-500">Features</h1>
             <h1 className="hover:text-violet-500">Pricing</h1>
@@ -716,15 +726,15 @@ const MainPage = () => {
             <h1 className="hover:text-violet-500">Integrations</h1>   
           </div>
           
-          <div className="text-gray-500">
+          <div className="text-gray-500 max-sm:my-5">
             <h1 className="text-black font-medium ">Company</h1>
             <h1 className="my-2 hover:text-violet-500">About</h1>
             <h1 className="hover:text-violet-500">Blog</h1>
             <h1 className="my-2 hover:text-violet-500">Careers</h1>
             <h1 className="hover:text-violet-500">Contact</h1> 
           </div>
-          
-          <div className="text-gray-500">
+        
+            <div className="text-gray-500">
             <h1 className="text-black font-medium">Resources</h1>
             <h1 className="my-2 hover:text-violet-500">Documentation</h1>
             <h1 className="hover:text-violet-500">Help Center</h1>
@@ -732,13 +742,16 @@ const MainPage = () => {
             <h1 className="hover:text-violet-500">Status</h1> 
           </div>
           
-          <div className="text-gray-500">
+          <div className="text-gray-500 max-sm:mt-5">
             <h1 className="text-black font-medium">Legal</h1>
             <h1 className="my-2 hover:text-violet-500">Privacy</h1>
             <h1 className="hover:text-violet-500">Terms</h1>
             <h1 className="my-2 hover:text-violet-500"  >Security</h1>
             <h1 className="hover:text-violet-500"> Compliance</h1> 
           </div>
+
+          
+
           
         </div>
         <hr className="text-gray-300" />

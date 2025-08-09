@@ -8,7 +8,7 @@ import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 const Deshboard = () => {
   return (
-    <div className='w-full h-auto px-19 mt-5 box-border mb-5'  >
+    <div className='w-full h-auto px-19 mt-5 box-border mb-5 '  >
         
         <div className='w-full flex justify-between items-center '>
             <div>
@@ -16,7 +16,7 @@ const Deshboard = () => {
                 <p className='text-gray-500'>Welcome back! Here's what's happening with your hiring pipeline.</p>
             </div>
 
-            <div className='ml-192' >
+            <div className='md:ml-192 lg:ml-192 xl:ml-192 '>
                 <button className='flex justify-center items-center p-3 rounded-2xl text-white
                 bg-linear-to-r from-[#9A6AF9] bg-[#B07FFB] to-[#C391FE]'><GoPlus className='transition delay-75 duration-500 hover:rotate-160 mr-3'/> New Check</button>
             </div>
@@ -26,11 +26,13 @@ const Deshboard = () => {
             </div>
         </div>
     {/*cards*/}
-        <div className='flex justify-between my-10'>
+        <div className='flex justify-between my-10 max-sm:flex-col flex-wrap '>
 
-        <div className='w-80 flex justify-center items-center transition delay-75 duration-500 
+        
+        <div className='max-sm:w-full max-sm:justify-between mt-2 w-80 flex justify-center items-center transition delay-75 duration-500 
         hover:scale-105 hover:shadow-xl hover:shadow-[#c491fe3b] box-border p-3 rounded-2xl border-1 border-[#6a728258]'>
-            <div>
+            <div className='max-sm:flex flex'>
+<div>
                 <div className="bg-linear-to-r from-violet-500 to-violet-400 p-2 flex justify-center items-center m-3 rounded-xl mr-5">
                     <span className=""><BsPersonLinesFill className="text-[24px] text-white mx-1"/></span>
               </div>
@@ -41,15 +43,18 @@ const Deshboard = () => {
                     <p className='text-[23px] font-bold'>24</p>
                 </div>
 
+            </div>
+            
             <div>
-                <span className='bg-[#9056FF] text-white w-12 rounded-2xl px-2 py-1 text-center text-[13px]' >+12% </span>
+                <span className='bg-[#9056FF] text-white w-12 rounded-2xl px-2 py-1 text-center text-[13px]' >+15% </span>
             </div>
 
         </div>
 
-        <div className='w-80 flex justify-center items-center transition delay-75 duration-500 
+        <div className='max-sm:w-full max-sm:justify-between mt-2 w-80 flex justify-center items-center transition delay-75 duration-500 
         hover:scale-105 hover:shadow-xl hover:shadow-[#c491fe3b] box-border p-3 rounded-2xl border-1 border-[#6a728258]'>
-            <div>
+            <div className='max-sm:flex flex'>
+                <div>
                 <div className="bg-linear-to-r from-violet-500 to-violet-400 p-2 flex justify-center items-center m-3 rounded-xl mr-5">
                     <span className=""><MdOutlineSecurity className="text-[24px] text-white mx-1"/></span>
               </div>
@@ -58,17 +63,20 @@ const Deshboard = () => {
             <div className='mr-4 mx-2'>
                 <h1 className='text-gray-500'>Reference Checks</h1>
                     <p className='text-[23px] font-bold'>18</p>
-                </div>
+            </div>
+            </div>
 
             <div>
                 <span className='bg-[#9056FF] text-white w-12 rounded-2xl px-2 py-1 text-center text-[13px]' >+8% </span>
             </div>
 
         </div>
+        
 
-        <div className='w-80 flex justify-center items-center transition delay-75 duration-500 
+        <div className='max-sm:w-full max-sm:justify-between mt-2 w-80 flex justify-center items-center transition delay-75 duration-500 
         hover:scale-105 hover:shadow-xl hover:shadow-[#c491fe3b] box-border p-3 rounded-2xl border-1 border-[#6a728258]'>
-            <div>
+            <div className='max-sm:flex flex'>
+<div>
                 <div className="bg-linear-to-r from-violet-500 to-violet-400 p-2 flex justify-center items-center m-3 rounded-xl mr-5">
                     <span className=""><TiMicrophone className="text-[24px] text-white mx-1"/></span>
               </div>
@@ -79,18 +87,22 @@ const Deshboard = () => {
                     <p className='text-[23px] font-bold'>12</p>
                 </div>
 
+            </div>
+            
             <div>
                 <span className='bg-[#9056FF] text-white w-12 rounded-2xl px-2 py-1 text-center text-[13px]' >+15% </span>
             </div>
 
         </div>
 
-        <div className='w-80 flex justify-center items-center transition delay-75 duration-500 
+        <div className='max-sm:w-full max-sm:justify-between mt-2 w-80 flex justify-center items-center transition delay-75 duration-500 
         hover:scale-105 hover:shadow-xl hover:shadow-[#c491fe3b] box-border p-3 rounded-2xl border-1 border-[#6a728258]'>
-            <div>
+            
+            <div className='max-sm:flex flex '>
+                <div>
                 <div className="bg-linear-to-r from-violet-500 to-violet-400 p-2 flex justify-center items-center m-3 rounded-xl mr-5">
                     <span className=""><HiArrowTrendingUp className="text-[24px] text-white mx-1"/></span>
-              </div>
+                </div>
             </div>
 
             <div className='mr-4 mx-2'>
@@ -98,6 +110,9 @@ const Deshboard = () => {
                     <p className='text-[23px] font-bold'>92%</p>
                 </div>
 
+            </div>
+            
+            
             <div>
                 <span className='bg-[#9056FF] text-white w-12 rounded-2xl px-2 py-1 text-center text-[13px]' >+5% </span>
             </div>
@@ -106,9 +121,9 @@ const Deshboard = () => {
 
         </div>
 
-        <div className='w-full flex justify-center items-center '>
+        <div className='flex justify-center items-center max-sm:justify-start max-sm:items-start'>
             {/*resent actives*/}
-            <div className='w-[65vw] h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7]'>
+            <div className='max-sm:w-full w-[65vw] h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7]'>
                 <div>
                     <h1 className='text-[22px] font-[600]'>Recent Activity</h1>
                 <p className='text-gray-500'>Latest updates from your hiring pipeline</p>
@@ -212,7 +227,7 @@ const Deshboard = () => {
 
             </div>
 
-            <div className='-mt-19 w-[30vw]  h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7] ml-8'>
+            <div className='max-sm:w-full max-sm:mt-6  max-sm:px-14 -mt-19 w-[30vw]  h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7] ml-8'>
                 <div>
                     <h1 className='text-[22px] font-[600]'>Quick Actions</h1>
                 <p className='text-gray-500'>Common tasks and shortcuts</p>

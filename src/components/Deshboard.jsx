@@ -1,4 +1,3 @@
-import React from 'react'
 import { GoPlus } from "react-icons/go";
 import { MdOutlineSecurity } from "react-icons/md";
 import { BsPersonLinesFill } from "react-icons/bs";
@@ -8,7 +7,7 @@ import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 const Deshboard = () => {
   return (
-    <div className='w-full h-auto px-19 mt-5 box-border mb-5 '  >
+    <div className='w-full h-auto px-19 max-md:px-1 mt-5 box-border mb-5 '  >
         
         <div className='w-full flex justify-between items-center '>
             <div>
@@ -121,9 +120,9 @@ const Deshboard = () => {
 
         </div>
 
-        <div className='flex justify-center items-center max-sm:justify-start max-sm:items-start'>
+        <div className='flex justify-center items-center max-md:flex-wrap'>
             {/*resent actives*/}
-            <div className='max-sm:w-full w-[65vw] h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7]'>
+            <div className='max-md:w-full w-[65vw] h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7]'>
                 <div>
                     <h1 className='text-[22px] font-[600]'>Recent Activity</h1>
                 <p className='text-gray-500'>Latest updates from your hiring pipeline</p>
@@ -227,7 +226,7 @@ const Deshboard = () => {
 
             </div>
 
-            <div className='max-sm:w-full max-sm:mt-6  max-sm:px-14 -mt-19 w-[30vw]  h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7] ml-8'>
+            <div className='max-md:-ml-1 max-sm:w-full max-sm:mt-6  max-sm:px-14 -mt-19 w-[30vw]  h-auto p-5 rounded-xl  border-1 border-[#6d7c92a7] ml-8'>
                 <div>
                     <h1 className='text-[22px] font-[600]'>Quick Actions</h1>
                 <p className='text-gray-500'>Common tasks and shortcuts</p>

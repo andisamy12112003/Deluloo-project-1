@@ -1,5 +1,5 @@
 import iconDeluloo from "../assets/iconDeluloo.png";
-import { BsStars } from "react-icons/bs";
+import { BsList, BsStars } from "react-icons/bs";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { HiArrowTrendingDown } from "react-icons/hi2";
 import { TiWarningOutline } from "react-icons/ti";
@@ -15,7 +15,7 @@ import { IoIosCheckmarkCircle } from "react-icons/io";
 import { BsPeopleFill } from 'react-icons/bs';
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { GoOrganization } from "react-icons/go";
-import { LuDot } from "react-icons/lu";
+import { LuDot, LuList } from "react-icons/lu";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { LuPhone } from "react-icons/lu";
 import { CiLocationOn } from "react-icons/ci";
@@ -23,15 +23,23 @@ import { GiCheckMark } from "react-icons/gi";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { ImCancelCircle } from "react-icons/im";
 
 import {Link} from "react-router-dom"
+import { useState } from "react";
 
 const MainPage = () => {
+
+  const [hide,setHide] = useState(true)
+console.log(hide)
+  const hideList = () => {
+    setHide(!hide)
+  }
   return(
     <div className="w-full font-sans no-scrollbar ">
 
       {/*Header */}
-      <header className="w-full fixed">
+      <header className="w-full fixed max-lg:hidden">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-10 ml-22" />
@@ -53,15 +61,26 @@ const MainPage = () => {
       </div>
       </header>
 
-      {/*Header sm*/}
-      <header className="w-full fixed hidden">
+      {/*header sm md lg */}
+      <header className="w-full fixed xl:hidden lg:hidden ">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-10 ml-22" />
           </div>
-          
-      </div>
+          <div >
+            {hide ? <BsList className="-ml-12" onClick={hideList}/>:
+            <ImCancelCircle className="-ml-12" onClick={hideList}/>}
+          </div>
+        </div>
+        <div className={`flex flex-col bg-white ${hide? "hidden" : " "} gap-y-7`}>
+            <a href="#Home" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8] ">Features</a>
+            <a href="#HowDeluloo" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">How its Works</a>
+            <a href="#Pricing" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">Pricing</a>
+            <a href="#About" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">About</a>
+            <Link to="/Dashboard" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">Dashboard</Link>
+          </div>
       </header>
+
       
       {/*Home Page*/}
       <main id="Home" className="w-full h-auto bg-[#F9F6FF] flex flex-col justify-center pt-20 ">
@@ -147,21 +166,21 @@ const MainPage = () => {
       <section className=" w-full h-auto bg-[#F4F0FE] ">  
         <div className="p-12 box-border flex justify-center max-sm:flex-col "> 
 
-          <div className="bg-[#FFFFFF]  text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
+          <div className="bg-[#FFFFFF]  text-lg w-70  max-md:w-auto max-md:px-19 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
             <h1 className="flex items-center "><FaMicrophone className="text-violet-800 text-2xl"/> <span className="ml-3">AI L1 Interviews
             </span></h1>
           </div>
 
           
-          <div className="bg-[#FFFFFF] max-sm:my-5 text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
+          <div className="bg-[#FFFFFF] max-sm:my-5 text-lg w-70 max-md:w-auto max-md:px-19 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
             <h1 className="flex items-center "><MdOutlineSecurity className="text-violet-800 text-2xl"/> <span className="ml-3">Reference Checks
             </span></h1>
           </div>
 
           
-          <div className="bg-[#FFFFFF] text-lg w-70 flex justify-center items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
+          <div className="bg-[#FFFFFF] text-lg w-70 flex justify-center max-md:w-auto max-md:px-19 items-center p-5 mx-8 hover:shadow-2xl rounded-2xl transition delay-75 duration-300 ">
             <h1 className="flex items-center "><BsPersonLinesFill className="text-violet-800 text-2xl"/> <span className="ml-3">Candidate Passports
-            </span></h1>
+            </span></h1>  
           </div>
 
         </div>
@@ -249,11 +268,11 @@ const MainPage = () => {
           to establish trust before you hire. Use them individually or as a complete hiring solution.</p>
         </div>
         
-        <div className="flex justify-evenly mt-7 max-sm:flex-col flex-wrap max-sm:items-center ">
+        <div className="flex justify-evenly mt-7 max-md:flex-col flex-wrap max-md:items-center">
         {/*card 1*/}
-        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-90 
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
-          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">1</span>
+          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97 max-md:-mr-90 max-md:-mt-150 ">1</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><MdOutlineSecurity className="text-[28px] text-white mx-1"/></span>
           </div>
@@ -264,7 +283,7 @@ const MainPage = () => {
             generic questions. Get structured insights with scoring and verification that reveals real performance patterns.</p>
 
           </div>
-          <ul className="flex flex-col justify-start items-start w-100">
+          <ul className="flex flex-col justify-start items-start w-auto">
             <li className="flex justify-center items-center text-[14px] mt-2"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Structured interview framework</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>AI-powered analysis & scoring</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Verification of claims & skills</li>
@@ -283,9 +302,9 @@ const MainPage = () => {
         </div>
 
         {/*card 2*/}
-        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-90  
         rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
-          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">2</span>
+          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97 max-md:-mr-90 max-md:-mt-150">2</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><FiCreditCard className="text-[28px] text-white mx-1"/></span>
           </div>
@@ -295,7 +314,7 @@ const MainPage = () => {
             <p className="text-gray-500 text-center">Verified, portable hiring profiles that candidates own. Think LinkedIn + Credit Score + Background Check in one reusable document.</p>
 
           </div>
-          <ul className="flex flex-col justify-start items-start w-100">
+          <ul className="flex flex-col justify-start items-start w-auto">
             <li className="flex justify-center items-center text-[14px] mt-2"><LuDot className="text-violet-600 text-[45px] -mr-2"/>AI-summarized references</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Verified credentials & skills</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Reputation layer for careers</li>
@@ -313,9 +332,9 @@ const MainPage = () => {
           </div>
         </div>
         {/*card 3*/}
-        <div className="max-sm:w-full container1 flex flex-col justify-center items-center border-1 border-gray-200 w-100 
-        rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 ">
-          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97">3</span>
+        <div className="max-sm:w-full container1 flex flex-col justify-center items-center 
+        border-1 border-gray-200 rounded-2xl p-6 mb-10 transition delay-75 duration-300 hover:scale-103 hover:shadow-2xl hover:shadow-gray-200 w-90 ">
+          <span className="bg-violet-600 text-lg rounded-[100%] w-7 text-center text-white font-medium absolute -mt-146 -mr-97 max-md:-mr-90 max-md:-mt-150">3</span>
           <div className="icon-scale bg-linear-to-r from-violet-500 to-violet-400 p-4 flex justify-center items-center m-3 rounded-2xl mr-5">
             <span className=""><FaMicrophone className="text-[28px] text-white mx-1"/></span>
           </div>
@@ -325,7 +344,7 @@ const MainPage = () => {
             <p className="text-gray-500 text-center">Screen high-volume non-tech roles with intelligent, conversational AI. Perfect for sales, support, and ops roles where soft skills matter.</p>
 
           </div>
-          <ul className="flex flex-col justify-start items-start w-100">
+          <ul className="flex flex-col justify-start items-start w-auto">
             <li className="flex justify-center items-center text-[14px] mt-2"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Conversational AI interviews</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Soft skills assessment</li>
             <li className="flex justify-center items-center text-[14px] -mt-4"><LuDot className="text-violet-600 text-[45px] -mr-2"/>Volume screening capability</li>
@@ -370,15 +389,15 @@ const MainPage = () => {
       </section>
 
       {/*Simple, Transparent Pricing*/}
-      <section id="Pricing" className=" bg-[#F7F4FF] pt-[10vh] max-sm:h-[300vh]">
+      <section id="Pricing" className=" bg-[#F7F4FF] max-md:pt-[10vh] max-md:h-auto ">
         <div className="text-center">
           <h1 className="text-[48px] font-[700]">Simple, Transparent Pricing</h1>
           <p className="text-[#777E8F] text-[20px]">Start free, scale as you grow. No setup fees, no hidden costs.</p>
         </div>
 
-        <div className="flex justify-center gap-8 max-sm:flex-col max-sm:items-center flex-wrap">
-
-          <div className="card w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 card">
+        <div className="flex justify-center gap-8 max-sm:flex-col max-sm:items-center flex-wrap ">
+        {/*card 1*/}
+         <div className="max-md:w-70 card w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 card">
             <div className="flex flex-col items-center">
               <p className=""><BsPeopleFill className="text-[57px] text-[#A676FA] bg-[#F2E6FF] p-3 rounded-2xl"/></p>
               <h1 className="text-[26px] font-[700] mt-2  ">Starter</h1>
@@ -406,8 +425,8 @@ const MainPage = () => {
                 <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
               </div>
           </div>
-          
-          <div className=" w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 shadow-2xl shadow-[#A676FA]
+          {/*card 2*/}
+          <div className="max-md:w-70 w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105 shadow-2xl shadow-[#A676FA]
           border-2  border-[#a573fc]">
             <span className="w-auto text-center px-3 text-white font-bold -mt-125 text-md rounded-2xl absolute bg-linear-to-r from-[#9464F7] bg-[#A772FA] to-[#A774FA]">Most Popular</span>
             <div className="flex flex-col items-center">
@@ -442,8 +461,8 @@ const MainPage = () => {
                 <IoIosArrowRoundForward className="mx-1 text-2xl text-white"/> </button>
               </div>
           </div>
-
-          <div className="w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105">
+          {/*card 3*/}
+          <div className="max-md:w-70 w-100 flex flex-col justify-center items-center bg-white p-8 mt-12 mb-12 rounded-2xl transition delay-75 duration-300 hover:scale-105">
             <div className="flex flex-col items-center">
               <p className=""><GoOrganization className="text-[57px] text-[#A676FA] bg-[#F2E6FF] p-2 rounded-2xl"/></p>
               <h1 className="text-[26px] font-[700] mt-2  ">Enterprise</h1>
@@ -476,19 +495,18 @@ const MainPage = () => {
                 <IoIosArrowRoundForward className="mx-1 text-2xl "/> </button>
               </div>
           </div>
-
-
         </div>
-        <div className="h-100 mt-12 w-full">
+        {/*ask questions*/}
+        <div className="h-100 mt-12 w-full ">
             <h1 className="text-center text-[24px] font-[700]">Frequently Asked Questions</h1>
             <div className="flex flex-col justify-center items-center gap-7">
-              <div className=" flex gap-6 mt-8 max-md:flex-col">
-              <div className="w-100 h-auto bg-white rounded-2xl p-5 ">
+              <div className=" flex gap-6 mt-8 max-md:flex-col ">
+              <div className="w-100 h-auto bg-white rounded-2xl p-5  max-md:w-70">
                 <p className="font-[600]">Do you offer a free trial?</p>
                 <p className="text-[14px] text-gray-500">Yes! All plans include a 14-day free trial with full access to features.</p>
               </div>
 
-              <div className="w-100 h-auto bg-white rounded-2xl p-5">
+              <div className="w-100 h-auto bg-white rounded-2xl p-5 max-md:w-70">
                 <p className="font-[600]">Can I change plans anytime?</p>
                 <p className="text-[14px] text-gray-500">Absolutely. Upgrade or downgrade your plan at any time with prorated billing.</p>
               </div>
@@ -497,12 +515,12 @@ const MainPage = () => {
 
             <div className=" flex gap-6 max-md:flex-col">
 
-              <div className="w-100 h-auto bg-white rounded-2xl p-5">
+              <div className="w-100 h-auto bg-white rounded-2xl p-5 max-md:w-70">
                 <p className="font-[600]">What about data security?</p>
                 <p className="text-[14px] text-gray-500">We're SOC 2 compliant with enterprise-grade security and global privacy compliance.</p>
               </div>
 
-              <div className="w-100 h-auto bg-white rounded-2xl p-5">
+              <div className="w-100 h-auto bg-white rounded-2xl p-5 max-md:w-70">
                 <p className="font-[600]">Do candidates pay anything?</p>
                 <p className="text-[14px] text-gray-500">Candidate Passports are completely free for job seekers to create and maintain.</p>
               </div>
@@ -516,11 +534,12 @@ const MainPage = () => {
       </section>
 
       {/*Ready to build trust before you hire?*/}
-      <section id="About"  className="pt-[6vw] max-sm:w-full h-auto flex justify-center items-center p-10 max-sm:flex-col ">
+      <section id="About"  className="pt-[6vw] max-md:w-full max-md:mt-50 h-auto flex max-lg:flex-col justify-center items-center p-10 max-md:p-0 ">
 
-        <div className="max-sm:w-full w-[46vw] h-full p-11 ">
-          <h1 className="text-[49px] font-[700]"><span className="block">Ready to build trust</span> <span className="-mt-6 block">before you hire?</span></h1>
-          <p className="text-gray-500 text-[21px]">Book a demo to see how Deluloo's three modules work together to create a delusion-free 
+        <div className="max-lg:w-full w-[46vw] h-auto p-11 ">
+          <h1 className="text-[49px] font-[700]"><span className="block max-md:text-3xl">Ready to build trust</span> <span className="-mt-6 block max-md:text-3xl max-md:-mt-1 ">before you 
+          hire?</span></h1>
+          <p className="text-gray-500 text-[21px] max-md:text-lg max-md:mt-2">Book a demo to see how Deluloo's three modules work together to create a delusion-free 
           hiring process. Our team will show you exactly how to implement verified trust in your hiring workflow.</p>
           <div>
             
@@ -562,12 +581,12 @@ const MainPage = () => {
           </div>
         </div>
       {/*form*/}
-        <div className="max-sm:w-[100vw] w-[50vw] h-auto flex justify-center items-center ">
-          <span className="animate-bounce absolute -mt-178 -mr-130 flex items-center text-[15px] 
+        <div className=" max-lg:w-full max-sm:w-[100vw] w-[50vw] h-auto flex justify-center items-center ">
+          <span className="animate-bounce absolute -mt-178 -mr-130 max-sm:-mr-60  flex items-center text-[15px] 
           bg-[#895AF6] p-1 px-2 text-white font-[600] rounded-2xl text-center transition delay-100 duration-1000">Demo Ready <GiCheckMark className="mx-1 text-sm"/></span>
-          <span className=" animate-bounce absolute -mb-178 -ml-145  flex items-center text-[15px] border-1 
+          <span className=" animate-bounce absolute -mb-178 -ml-145 max-sm:-ml-60   flex items-center text-[15px] border-1 
           border-[#FAF8FF]  p-1 px-2 font-[600] rounded-2xl text-center bg-white shadow-2xl">Free Trial </span>
-            <div className="bg-white w-[40vw] h-auto rounded-2xl shadow-xl shadow-violet-200 ">
+            <div className="bg-white max-lg:w-full w-[40vw] h-auto rounded-2xl shadow-xl shadow-violet-200 ">
               <div>              
                 <div className="flex justify-start items-center ml-6 mt-7">
                   <img src={iconDeluloo} alt="" className="w-18 rounded-2xl p-2 mx-3" />

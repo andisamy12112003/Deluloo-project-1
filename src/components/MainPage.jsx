@@ -80,8 +80,8 @@ console.log(hide)
             <Link to="/Dashboard" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">Dashboard</Link>
             <div className="mr-10 flex flex-col">
             <a href="#Pricing"><button  className="mx-3 w-full h-10 hover:bg-violet-200 rounded-2xl hover:text-voilet-300 hover:text-[#9565F8] hover:font-bold"  >Sign in</button></a>
-            <a href="#Home">
-              <button className="mx-3 w-full h-10 rounded-2xl bg-gradient-to-l from-bg-[#895AF7] bg-[#895AF6] to-bg-[#895AF6] text-white text-md items-center transition delay-10 
+            <a href="#Home ">
+              <button className="mt-5  mb-7 mx-3 w-full h-10 rounded-2xl bg-gradient-to-l from-bg-[#895AF7] bg-[#895AF6] to-bg-[#895AF6] text-white text-md items-center transition delay-10 
             duration-100 ease-in-out hover:scale-109 ">Get Started</button>
             </a>
           </div>

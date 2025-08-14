@@ -65,20 +65,28 @@ console.log(hide)
       <header className="w-full fixed xl:hidden lg:hidden ">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
-            <img src={iconDeluloo} alt="" className="w-10 ml-22" />
+            <img src={iconDeluloo} alt="" className="w-15 ml-9 " />
           </div>
           <div >
-            {hide ? <BsList className="-ml-12" onClick={hideList}/>:
-            <ImCancelCircle className="-ml-12" onClick={hideList}/>}
-          </div>
+            {hide ? <BsList className="-ml-12 text-3xl" onClick={hideList}/>:
+            <ImCancelCircle className="-ml-12 text-3xl" onClick={hideList}/>}
+          </div> 
         </div>
-        <div className={`flex flex-col bg-white ${hide? "hidden" : " "} gap-y-7`}>
+        <div className={`flex flex-col bg-[#fcfcffe7] ${hide? "hidden" : " "} gap-y-7 `}>
             <a href="#Home" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8] ">Features</a>
             <a href="#HowDeluloo" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">How its Works</a>
             <a href="#Pricing" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">Pricing</a>
             <a href="#About" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">About</a>
             <Link to="/Dashboard" className="mx-4 text-[#64748B] font-medium hover:text-[#9263F8]">Dashboard</Link>
+            <div className="mr-10 flex flex-col">
+            <a href="#Pricing"><button  className="mx-3 w-full h-10 hover:bg-violet-200 rounded-2xl hover:text-voilet-300 hover:text-[#9565F8] hover:font-bold"  >Sign in</button></a>
+            <a href="#Home">
+              <button className="mx-3 w-full h-10 rounded-2xl bg-gradient-to-l from-bg-[#895AF7] bg-[#895AF6] to-bg-[#895AF6] text-white text-md items-center transition delay-10 
+            duration-100 ease-in-out hover:scale-109 ">Get Started</button>
+            </a>
           </div>
+          </div>
+          
       </header>
 
       

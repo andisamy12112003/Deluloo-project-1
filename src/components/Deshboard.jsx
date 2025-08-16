@@ -7,7 +7,7 @@ import { IoCheckmarkDoneCircle } from "react-icons/io5";
 import { LuClock } from "react-icons/lu";
 const Deshboard = () => {
   return (
-    <div className='w-full h-auto px-19 max-md:px-1 mt-5 box-border mb-5 '  >
+    <div className='w-full h-auto px-19 max-md:px-1 mt-5 box-border mb-5 '>
         
         <div className='w-full flex justify-between items-center '>
             <div>

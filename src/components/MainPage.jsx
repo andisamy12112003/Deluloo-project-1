@@ -39,7 +39,7 @@ console.log(hide)
     <div className="w-full font-sans no-scrollbar ">
 
       {/*Header */}
-      <header className="w-full fixed max-lg:hidden">
+      <header className="w-full fixed max-lg:hidden z-1">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-10 ml-22" />
@@ -62,7 +62,7 @@ console.log(hide)
       </header>
 
       {/*header sm md lg */}
-      <header className="w-full fixed xl:hidden lg:hidden ">
+      <header className="w-full xl:hidden lg:hidden fixed z-1 ">
         <div className="w-full flex justify-between h-20 bg-[#fcfcffdf] items-center box-border">
           <div>
             <img src={iconDeluloo} alt="" className="w-15 ml-9 " />
